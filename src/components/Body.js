@@ -39,29 +39,38 @@ const Body = () => {
 
 
     return(
-        <div className="body-content">
-            <div className="mind-card">
+        // bodycontent
+        <div className="w-[80vw] h-[100vh] my-[5px] mx-auto">
+            <div className="font-['Playwrite_HU',_cursive] w-[80vw] h-[50vh] my-[20px] mx-auto p-[10px]">
             
-            <p className="para1">What's on your mind?</p>
+            <p className="text-[40px] font-bold pt-[10px]">What's on your mind?</p>
             
             
 
        
-       
-        <div className="img-card">
-            <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Biryani.png" alt="Biryani" />
-            <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Pizzas.png" alt="Pizzas" />
-            <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_burger.png" alt="Burger" />
-            <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_North%20Indian.png" alt="North Indian" />
-            <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Chinese.png" alt="Chinese" />
-            <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/17/58760e8e-324f-479e-88fa-31800120ea38_Rolls1.png" alt="Rolls" />
-            <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_chocolate%20icecream.png" alt="Chocolate Icecream" />
+       {/* mindcard */}
+        <div className="flex flex-row h-[260px] gap-[10px] shadow-[rgba(222,186,244,0.25)_0px_54px_55px,rgba(222,186,244,0.25)_0px_-12px_30px,rgba(0,0,0,0.12)_0px_4px_6px,rgba(0,0,0,0.17)_0px_12px_13px,rgba(0,0,0,0.09)_0px_-3px_5px] border border-[#c6a8ed] p-[20px] m-[10px] box-border">
+            <img className="h-[200px] w-[200px] transition-transform duration-300 ease-out hover:cursor-pointer hover:scale-110"
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Biryani.png" alt="Biryani" />
+            <img className="h-[200px] w-[200px] transition-transform duration-300 ease-out hover:cursor-pointer hover:scale-110"
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Pizzas.png" alt="Pizzas" />
+            <img className="h-[200px] w-[200px] transition-transform duration-300 ease-out hover:cursor-pointer hover:scale-110"
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_burger.png" alt="Burger" />
+            <img className="h-[200px] w-[200px] transition-transform duration-300 ease-out hover:cursor-pointer hover:scale-110"
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_North%20Indian.png" alt="North Indian" />
+            <img className="h-[200px] w-[200px] transition-transform duration-300 ease-out hover:cursor-pointer hover:scale-110"
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Chinese.png" alt="Chinese" />
+            <img className="h-[200px] w-[200px] transition-transform duration-300 ease-out hover:cursor-pointer hover:scale-110"
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/17/58760e8e-324f-479e-88fa-31800120ea38_Rolls1.png" alt="Rolls" />
+            <img className="h-[200px] w-[200px] transition-transform duration-300 ease-out hover:cursor-pointer hover:scale-110"
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_chocolate%20icecream.png" alt="Chocolate Icecream" />
         </div>
             </div>
 
-            <div className="top-res">
-            Handpicked Restaurants for Every Craving
-            <svg className="svg"
+        {/* topres */}
+            <div className="w-[80vw] my-[20px]  text-[40px] flex gap-[20px] items-center relative border-b-2 border-black ">
+            <p className="text-[40px] font-['Poppins',_sans-serif]  ">Handpicked Restaurants for Every Craving</p>
+            <svg className="w-[70px] h-[70px]"
                 fill="#000000"
                 width="800px"
                 height="800px"
@@ -90,10 +99,13 @@ const Body = () => {
             </svg>
             </div>
 
-        <div className="utilities">
+        <div className="flex justify-between items-center w-full pb-[50px]"
+>
            
-            <div className="filter">
-              <button className="filter-btn" onClick={() => {
+            <div className="flex items-center gap-[10px]"
+>
+              <button className="px-5 py-2 bg-[#cfbce6] text-[#492e6b] border-none rounded-[10px] cursor-pointer text-[20px] shadow-[rgba(201,182,220,0.3)_0px_19px_38px,rgba(0,0,0,0.22)_0px_15px_12px]"
+                onClick={() => {
                 console.log("button");
               const filteredList = listOfRes.filter(
                 (restaurants) => restaurants.info.avgRating > 4.5
@@ -101,7 +113,8 @@ const Body = () => {
               setFilteredRes(filteredList);
               }}   > Top rated restauarants </button>
 
-              <button className="fast-btn" onClick={() => {
+              <button className="px-5 py-2 bg-[#cfbce6] text-[#492e6b] border-none rounded-[10px] cursor-pointer text-[20px] shadow-[rgba(201,182,220,0.3)_0px_19px_38px,rgba(0,0,0,0.22)_0px_15px_12px]"
+              onClick={() => {
               const fastDeliveryList = listOfRes.filter(
                 (restaurants) => restaurants.info.sla.deliveryTime < 30
                 
@@ -112,17 +125,19 @@ const Body = () => {
             
             
             
-            <div className="search-bar">
+            <div className="flex items-center h-[20px] w-[400px] bg-white rounded-[25px] border border-[#492e6b] shadow-[rgba(50,50,93,0.25)_0px_30px_60px_-12px,rgba(0,0,0,0.3)_0px_18px_36px_-18px] p-[10px]"
+>
         <input
             type="text"
-            className="search-input"
+            className="w-[80%] p-[10px] border-none outline-none rounded-[20px] text-[20px] bg-transparent text-[#333]"
+
                 value={searchText}
                 onChange={(e) => {
                 setSearchText(e.target.value); // Store user input as a string
                 }}
         />
         <button
-            className="search-icon"
+            className="bg-transparent border-none p-[5px] cursor-pointer"
             onClick={() => {
                 console.log(searchText);
 
@@ -138,14 +153,14 @@ const Body = () => {
         <img
             src="https://www.svgrepo.com/show/7109/search.svg"
             alt="search icon"
-            className="search-img"
+            className="w-[20px] h-[20px] cursor-pointer"
         />
         </button>
             </div>
         </div>
        
-        
-        <div className="res-container">
+        {/* rescontainer */}
+        <div className="h-[500px] gap-[20px] flex flex-wrap flex-row justify-evenly">
                {filteredRes.map((restaurant) => (
                 <Link className="custom-link"
                 key={restaurant.info.id}

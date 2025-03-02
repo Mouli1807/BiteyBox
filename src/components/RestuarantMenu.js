@@ -22,20 +22,17 @@ const RestuarantMenu = () => {
     console.log(categories);
   
     return (
-    <div className="menu">
-        <h1>{name}</h1>
-        <p>{cuisines.join(", ")} - {costForTwoMessage}</p>
+    <div className=" text-center w-[80vh] h-[80vh] my-[30px] mx-auto p-[50px] bg-white  ">
+        <h1 className="font-bold text-[50px] m-4 ">{name}</h1>
+        <p className="text-2xl " >{cuisines.join(", ")} - {costForTwoMessage}</p>
         {categories.length > 0 ? (
                 categories.map((category, index) => (
                     <RestaurantCategory data={category?.card?.card} />
                 ))
             ) : (
-                <p>No categories found.</p> // 🔴 Will show if categories are empty
+                <p>No categories found.</p> 
             )}
             
-
-        
-        
     </div>
  
 
