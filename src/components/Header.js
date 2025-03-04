@@ -1,10 +1,13 @@
 import { CART_URL } from "../utils/constants";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import headerImg from "../../aseet/svgviewer-png-output (1).png";
 import { NavLink } from "react-router"; 
+import userContext from "../utils/userContext";
 
 const Header = () => {
     const [btnNameReact, setbtnNameReact] = useState("Log In");
+
+    const {loggedInUser} = useContext(userContext);
     
     return(
         <div className="flex justify-between items-center w-[80vw] mx-auto my-5 p-5 rounded-[10px] shadow-[rgba(50,50,93,0.25)_0px_50px_100px_-20px,rgba(0,0,0,0.3)_0px_30px_60px_-30px] bg-[#c6a8ed]"
@@ -51,13 +54,16 @@ const Header = () => {
         <div className="w-[50px] h-[50px] mx-[20px] p-0">
             <img className="cart" src={CART_URL}/>
         </div>
-        <button className="w-[10vw] h-[60px] text-white border border-[#492e6b] rounded-[10px] shadow-[rgba(0,0,0,0.3)_0px_19px_38px,rgba(0,0,0,0.22)_0px_15px_12px] bg-[#492e6b] text-[20px] m-0 cursor-pointer"
+        <button className="w-[10vw] h-[60px] text-white border border-[#492e6b] rounded-[10px] shadow-[rgba(0,0,0,0.3)_0px_19px_38px,rgba(0,0,0,0.22)_0px_15px_12px] 
+         bg-[#492e6b] text-[20px] m-0 cursor-pointer"
 
         onClick={() => {
             btnNameReact === "Log In" ? 
             setbtnNameReact("Log Out") : setbtnNameReact("Log In")
         }}  >{btnNameReact}</button>
+        <div className="text-2xl font-bold ">{loggedInUser}</div>
     </div>
+
     );
     
 };
