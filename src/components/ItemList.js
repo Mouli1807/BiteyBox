@@ -1,6 +1,16 @@
-
+import {useDispatch} from "react-redux";
+import {addItem} from "../RTStore/cartSlice";
 
 const ItemList = ({items}) => {
+
+const dispatch = useDispatch();
+
+const handleAddItem = () =>{
+  //dispatch an action
+  dispatch(addItem("pizza"));
+
+}  
+
     return (
         <div>
           {items.map((items) => (
@@ -14,7 +24,9 @@ const ItemList = ({items}) => {
                   
                   <span>
                     - ₹
-                    {items.card.info.defaultPrice/100}
+                    {items.card.info.price
+                  ? items.card.info.price / 100
+                  : items.card.info.defaultPrice / 100}
                   </span>
                 </div>
                 <p className="text-xs">{items.card.info.description}</p>
@@ -22,7 +34,9 @@ const ItemList = ({items}) => {
               <div className="w-3/12 p-4">
                 <div className="absolute">
                   <button
-                    className="p-2 mx-16 rounded-lg bg-black text-white shadow-lg">
+                    className="p-2 mx-16 rounded-lg bg-black text-white shadow-lg"
+                    onClick= {handleAddItem}
+                    >
                     Add +
                   </button>
                 </div>

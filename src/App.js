@@ -4,21 +4,24 @@ import Header from "./components/Header";
 import Body from "./components/Body";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router";
 import './index.css';
-
 import Error from "./components/Error";
 import RestuarantMenu from "./components/RestuarantMenu";
 import ContactUs from "./components/ContactUs";
 import { lazy } from "react";
-
+import { Provider } from "react-redux";
+import appStore from "./RTStore/appStore";
 
 const About = lazy(() => import("./components/About") );
 
 function Applayout() {
     return (
-        <div className="app">
+        <Provider store={appStore}>
+            <div className="app">
             <Header />
             <Outlet />
         </div>
+        </Provider>
+     
     );
 
 }
@@ -54,4 +57,4 @@ const appRouter = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router = {appRouter} /> );
-// root.render(<Applayout/> );
+
