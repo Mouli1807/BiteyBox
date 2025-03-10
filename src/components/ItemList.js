@@ -1,13 +1,14 @@
 import {useDispatch} from "react-redux";
-import {addItem} from "../RTStore/cartSlice";
+import { addItem } from "../RTStore/cartSlice";
+
 
 const ItemList = ({items}) => {
 
 const dispatch = useDispatch();
 
-const handleAddItem = () =>{
+const handleAddItem = (items) =>{
   //dispatch an action
-  dispatch(addItem("pizza"));
+  dispatch(addItem(items));
 
 }  
 
@@ -35,7 +36,7 @@ const handleAddItem = () =>{
                 <div className="absolute">
                   <button
                     className="p-2 mx-16 rounded-lg bg-black text-white shadow-lg"
-                    onClick= {handleAddItem}
+                    onClick= {() => handleAddItem(items)}
                     >
                     Add +
                   </button>
