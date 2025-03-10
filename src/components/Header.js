@@ -11,8 +11,13 @@ const Header = () => {
     const {loggedInUser} = useContext(userContext);
 
     //subscribing to the store using selector
-    const cartItems = useSelector((store) => store.cart.items || []);
-    
+    // const cartItems = useSelector((store) => store.cart.items || []);
+    // console.log(cartItems);
+    const cartState = useSelector((store) => store.cart);
+    console.log("Cart State:", cartState);
+
+    const cartItems = cartState ? cartState.items : [];
+    console.log("Cart Items:", cartItems);
     
     return(
         <div className="flex justify-between items-center w-[80vw] mx-auto my-5 p-5 rounded-[10px] shadow-[rgba(50,50,93,0.25)_0px_50px_100px_-20px,rgba(0,0,0,0.3)_0px_30px_60px_-30px] bg-[#c6a8ed]"
