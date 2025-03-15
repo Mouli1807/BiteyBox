@@ -18,65 +18,65 @@ const Header = () => {
 
     const cartItems = cartState ? cartState.items : [];
     console.log("Cart Items:", cartItems);
-    
-    return(
-        <div className="flex justify-between items-center w-[80vw] mx-auto my-5 p-5 rounded-[10px] shadow-[rgba(50,50,93,0.25)_0px_50px_100px_-20px,rgba(0,0,0,0.3)_0px_30px_60px_-30px] bg-[#c6a8ed]"
-        >
-        <div className="logo-container">
-            <img className="w-[300px] h-[150px]" src={headerImg} ></img>
+   
+    return (
+        <div className="flex justify-between items-center w-[80vw] mx-auto my-5 p-5 rounded-lg shadow-lg bg-[#c6a8ed]">
             
-        </div>
-        <div className="flex text-[30px] list-none gap-[30px] font-['Poppins',_sans-serif] font-[150]">
-        <ul className="flex gap-[30px]">
-        <li>
-            <NavLink 
-                to="/" 
-                className={({ isActive }) => 
-                    isActive ? "font-bold underline text-[#492e6b]" : "text-[#492e6b]"
-                }
-            >
-                Home
+            {/* Logo Section */}
+            <div className="flex items-center">
+                <img className="w-[180px] h-auto object-contain" src={headerImg} alt="Logo" />
+            </div>
+
+            {/* Navigation Links */}
+            <nav className="flex gap-12 text-lg font-medium">
+                <NavLink 
+                    to="/" 
+                    className={({ isActive }) => 
+                        isActive ? "font-bold underline text-[#492e6b]" : "hover:text-[#492e6b] transition"
+                    }
+                >
+                    Home
+                </NavLink>
+                <NavLink 
+                    to="/about" 
+                    className={({ isActive }) => 
+                        isActive ? "font-bold underline text-[#492e6b]" : "hover:text-[#492e6b] transition"
+                    }
+                >
+                    About
+                </NavLink>      
+                <NavLink 
+                    to="/contact" 
+                    className={({ isActive }) => 
+                        isActive ? "font-bold underline text-[#492e6b]" : "hover:text-[#492e6b] transition"
+                    }
+                >
+                    Contact Us
+                </NavLink>
+            </nav>
+
+            {/* Cart Section with Link */}
+            <NavLink to="/cart" className="flex items-center gap-2 p-2 rounded-lg hover:bg-[#b291da] transition">
+                <div className="w-10 h-10">
+                    <img className="w-full h-full object-contain" src={CART_URL} alt="Cart" />
+                </div>
+                <div className="text-lg font-semibold">{cartItems.length} items</div>
             </NavLink>
-        </li>
-        <li>
-            <NavLink 
-                to="/about" 
-                className={({ isActive }) => 
-                    isActive ? "font-bold underline text-[#492e6b]" : "text-[#492e6b]"
-                }
-            >
-                About
-            </NavLink>      
-        </li>
-        <li>
-            <NavLink 
-                to="/contact" 
-                className={({ isActive }) => 
-                    isActive ? "font-bold underline text-[#492e6b]" : "text-[#492e6b]"
-                }
-            >
-                Contact Us
-            </NavLink>
-        </li>
-        </ul>
+
+            {/* Login Section */}
+            <div className="flex items-center gap-4">
+                {/* Login Button */}
+                <button className="px-6 py-3 text-white border border-[#492e6b] rounded-lg shadow-md bg-[#492e6b] hover:bg-[#3a2458] transition"
+                    onClick={() => setbtnNameReact(btnNameReact === "Log In" ? "Log Out" : "Log In")}>
+                    {btnNameReact}
+                </button>
+
+                {/* Username */}
+                <div className="text-md font-semibold text-gray-800">{loggedInUser}</div>
+            </div>
         </div>
-        {/* cart */}
-        <div className="w-[50px] h-[50px] mx-[20px] p-0">
-            <img className="cart" src={CART_URL}  /> 
-        </div>
-        <div>- {cartItems ? cartItems.length : 0} items</div>
-
-        <button className="w-[10vw] h-[60px] text-white border border-[#492e6b] rounded-[10px] shadow-[rgba(0,0,0,0.3)_0px_19px_38px,rgba(0,0,0,0.22)_0px_15px_12px] 
-         bg-[#492e6b] text-[20px] m-0 cursor-pointer"
-
-        onClick={() => {
-            btnNameReact === "Log In" ? 
-            setbtnNameReact("Log Out") : setbtnNameReact("Log In")
-        }}  >{btnNameReact}</button>
-        <div className="text-2xl font-bold ">{loggedInUser}</div>
-    </div>
-
     );
-    
 };
+    
+
 export default Header;
